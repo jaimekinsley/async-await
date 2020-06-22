@@ -14,16 +14,6 @@ describe('tests copy function', () => {
     ]);
   });
 
-  // it('can copy a file contents into a new file', () => {
-  //   return copy('./copy-file.txt', './new-copy-file.txt')
-  //     .then(() => {
-  //       return fsPromises.readFile('./new-copy-file.txt', { encoding: 'utf8' });
-  //     })
-  //     .then(newFile => {
-  //       expect(newFile).toEqual('this is a file for testing the copy function');
-  //     });
-  // });
-
   it('can copy a file contents into a new file', async() => {
     await copy('./copy-file.txt', './new-copy-file.txt');
     const newFile = await fsPromises.readFile('./new-copy-file.txt', { encoding: 'utf8' });
